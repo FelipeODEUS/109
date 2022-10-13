@@ -49,7 +49,7 @@ while True:
                 # ESCREVA O CÓDIGO AQUI  
                 image = pyautogui.screenshot()
                 image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
-                cv2.inwrite("in_memory_to_disk.png", image)
+                cv2.imwrite("in_memory_to_disk.png", image)
                 pyautogui.screenshot("strainght_to_disk.png")
                 image = cv2.imread("strainght_to_disk.png")
                 cv2.imshow("Capitura de tela", imutils.resize(image,width=600))
